@@ -53,7 +53,10 @@ $items=$itemsResponse->itemsList->item;
             
             if($dni==1)
                 $koncowka=" dzień ";
-            $czas="Pozostało: ".$dni.$koncowka.$godziny." h";
+            if(empty($czas_js))
+              $czas="Do wyczerpania";
+            else
+              $czas="Pozostało: ".$dni.$koncowka.$godziny." h";
 			
 function LoadJpeg($color,$imgname,$name,$price,$time)
 {
